@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     $("a[href^='#']").click(function() {
         $('html, body').animate({
-            scrollTop: $("" + $(this).attr("href") + "").offset().top
+            scrollTop: $("" + $(this).attr("href") + "").offset().top - 75
         }, 700);
     });
 });
