@@ -12,6 +12,7 @@
     --primary-color: #fff;
     --accent-color: #FF282E;
     --accent-color-alt: #FF2D39;
+    --btn-hover-color: #E51B21;
 
     --header-height: 80px;
 }
@@ -43,6 +44,11 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: var(--btn-hover-color);
 }
 
 .button__icon {
@@ -51,9 +57,19 @@ a {
     margin-right: 12px;
 }
 
+section a:hover {
+    text-decoration: underline;
+}
+
 .button-transparent {
-    background-color: transparent;
+    background-color: transparent !important;
     outline: 1px solid var(--primary-color);
+    transition: .3s;
+}
+
+.button-transparent:hover {
+    color: var(--accent-color);
+    outline: 1px solid var(--accent-color);
 }
 
 .burger {
@@ -198,6 +214,14 @@ section:first-child {
 .header__menu-list {
     display: flex;
     gap: 32px;
+}
+
+.header__menu-link {
+    transition: .3s;
+}
+
+.header__menu-link:hover {
+    color: var(--accent-color);
 }
 
 .header__button {
@@ -887,6 +911,22 @@ a.footer__copyright {
     flex: 1 1 auto;
     opacity: 0.8;
     text-align: right;
+}
+
+.socials a path {
+    transition: .3s;
+}
+
+.socials a:hover path {
+    fill: var(--accent-color);
+}
+
+.footer__copyright {
+    transition: .3s;
+}
+
+.footer__copyright:hover {
+    opacity: 1;
 }
 
 @media screen and (max-width: 1024px) {
